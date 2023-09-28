@@ -14,7 +14,7 @@ function CompanyPage(props) {
       <ul className = "techStack">
         {selectedCompany.techStack.map((oneTechnology)=>(
         
-          <Link key={oneTechnology.id} to={`/tech/${oneTechnology.slug}`}>
+          <Link key={oneTechnology.id} to={`/tech/${oneTechnology.slug}?previousCompany=${selectedCompany.slug}`}>
           <li>
             <img src={oneTechnology.image} style = {{width:"50px"}}/>
             <h5>{oneTechnology.name}</h5>
