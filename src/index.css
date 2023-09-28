@@ -21,7 +21,7 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
+  /* display: flex; */
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
@@ -49,6 +49,10 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+ul{
+  list-style: none;
+  padding: 0;
+}
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -62,3 +66,18 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.techStack{
+  display: flex;
+  box-sizing: border-box;
+  flex-wrap: nowrap;
+  overflow: scroll;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.techStack li{
+  
+  margin: 25px;;
+}
+
