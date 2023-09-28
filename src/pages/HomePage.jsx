@@ -5,7 +5,7 @@ function HomePage(props) {
   return (
     <div>
       <h1>StackTracker: Discover Tech Stacks Used by Top Companies</h1>
-      <ul style = {{display: "flex", flexWrap:"wrap"}}>
+      <ul style = {{display: "flex", flexWrap:"wrap", justifyContent:"space-between"}}>
         {props.companies.map((oneCompany)=>(
           
           <Link key={oneCompany.id} to={`/company/${oneCompany.slug}`}>

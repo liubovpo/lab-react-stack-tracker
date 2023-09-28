@@ -10,17 +10,18 @@ function CompanyPage(props) {
       <img src={selectedCompany.logo} style = {{width:"100px"}}/>
       <h2>{selectedCompany.name}</h2>
       <p>{selectedCompany.description}</p>
-      <div className = "techStack" >
-        {props.companies.map((oneCompany)=>(
-        <ul>
-          <Link key={oneCompany.id} to={`/tech/${oneCompany.slug}`}>
+      <div>
+      <ul className = "techStack">
+        {selectedCompany.techStack.map((oneTechnology)=>(
+        
+          <Link key={oneTechnology.id} to={`/tech/${oneTechnology.slug}`}>
           <li>
-            <img src={oneCompany.logo} style = {{width:"50px"}}/>
-            <h5>{oneCompany.name}</h5>
+            <img src={oneTechnology.image} style = {{width:"50px"}}/>
+            <h5>{oneTechnology.name}</h5>
           </li>
           </Link>
-        </ul>
         ))}
+        </ul>
       </div>
     </div>
   );
